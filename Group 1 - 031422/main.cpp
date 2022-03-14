@@ -18,6 +18,7 @@ GLfloat polygonvertices[] = {
 };
 
 //add GLfloat *mapV - ANDAYA
+GLfloat *mapV = NULL;
 
 int main(int argc, char** argv){
 	
@@ -60,11 +61,12 @@ void polygon(){
 void display(){
 	
 	glClear(GL_COLOR_BUFFER_BIT);
-	glColor4f(.16f,.72f,.08f,1.0f); //CHANGE COLOR - ANDAYA
+	glColor4f(.1f,.42f,.7f,1.0f); //CHANGE COLOR - ANDAYA PINK LEZGO
 	//awfawefain
 	polygon();
 	glFlush();
 	//add glutTimer - ANDAYA 
+	glutTimerFunc(1000,modifyPolygon,1);
 	
 }
 
