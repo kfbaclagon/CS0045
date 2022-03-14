@@ -61,6 +61,7 @@ void display(){
 	
 	glClear(GL_COLOR_BUFFER_BIT);
 	glColor4f(.16f,.72f,.08f,1.0f); //CHANGE COLOR - ANDAYA
+	//awfawefain
 	polygon();
 	glFlush();
 	//add glutTimer - ANDAYA 
