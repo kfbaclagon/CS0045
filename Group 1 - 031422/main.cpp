@@ -34,6 +34,7 @@ int main(int argc, char** argv){
 }
 
 //make changes - ARIAS
+//hello po try edit lang
 void polygon(){
 	
 	GLuint VBOid;
