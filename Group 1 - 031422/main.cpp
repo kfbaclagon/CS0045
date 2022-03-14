@@ -37,24 +37,32 @@ int main(int argc, char** argv){
 	}
 }
 
-//make changes - ARIAS
+//ARIAS
 void polygon(){
-	
-	GLuint VBOid;
-	glGenBuffers(1, &VBOid);
-	glBindBuffer(GL_ARRAY_BUFFER, VBOid);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat)*18, polygonvertices, GL_STATIC_DRAW);
-	
-	glEnableClientState(GL_VERTEX_ARRAY);
-	glVertexPointer(3, GL_FLOAT, 0, 0);
-	glDrawArrays(GL_POLYGON,0,18);
-	glDisableClientState(GL_VERTEX_ARRAY);
-	
-	// bind with 0, so, switch back to normal pointer operation
-	glBindBuffer(GL_ARRAY_BUFFER, 0);
-	glDeleteBuffers(1, &VBOid);
-	
-}
+
+		if(!forUpdate){
+		
+		glGenBuffers(1, &VBOid);
+		glBindBuffer(GL_ARRAY_BUFFER, VBOid);
+		glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat)*18, polygonvertices, GL_DYNAMIC_DRAW);
+		
+		glEnableClientState(GL_VERTEX_ARRAY);
+		
+		glVertexPointer(3, GL_FLOAT, 0, 0);
+		glDrawArrays(GL_POLYGON,0,18);
+		
+		glDisableClientState(GL_VERTEX_ARRAY);
+		
+		}else{
+		
+		glEnableClientState(GL_VERTEX_ARRAY);
+		
+		glVertexPointer(3, GL_FLOAT, 0, 0);
+		glDrawArrays(GL_POLYGON,0,18);
+		
+		glDisableClientState(GL_VERTEX_ARRAY);
+		}
+	}
 
 //void modifyPolygon(int value) - BALALA
 
