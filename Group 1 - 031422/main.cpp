@@ -19,6 +19,9 @@ GLfloat polygonvertices[] = {
 
 //add GLfloat *mapV - ANDAYA
 GLfloat *mapV = NULL;
+int forUpdate=0;
+int ctr=0;
+GLuint VBOid;
 
 int main(int argc, char** argv){
 	
