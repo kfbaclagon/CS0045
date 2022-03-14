@@ -17,7 +17,7 @@ GLfloat polygonvertices[] = {
 	-1.0f,0.0f,0.0f //sixth vertex
 };
 
-//add GLfloat *mapV - ANDAYA
+//ANDAYA
 GLfloat *mapV = NULL;
 int forUpdate=0;
 int ctr=0;
@@ -38,7 +38,6 @@ int main(int argc, char** argv){
 }
 
 //make changes - ARIAS
-//hello po try edit lang
 void polygon(){
 	
 	GLuint VBOid;
@@ -59,7 +58,7 @@ void polygon(){
 
 //void modifyPolygon(int value) - BALALA
 
-//void translate(float x, float y, float z, int startindex) - BAYNOSA
+//BAYNOSA
 void translate(float x, float y, float z, int startindex){
 	
 	GLfloat w = 1.0f;
@@ -86,12 +85,9 @@ void translate(float x, float y, float z, int startindex){
 void display(){
 	
 	glClear(GL_COLOR_BUFFER_BIT);
-	glColor4f(.1f,.42f,.7f,1.0f); //CHANGE COLOR - ANDAYA PINK LEZGO
-	//awfawefain
-	glColor4f(.16f,.72f,.08f,1.0f); //CHANGE COLOR - ANDAYA hatdog cheesedog pinklezgo
+	glColor4f(.1f,.42f,.7f,1.0f); //CHANGE COLOR
 	polygon();
 	glFlush();
-	//add glutTimer - ANDAYA 
 	glutTimerFunc(1000,modifyPolygon,1);
 	
 }
